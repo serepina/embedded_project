@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Flask-Sqlite Test</title>
+</head>
+<body>
+<center>
+<a style="font-size:40px; font-weight: bolder;">흡연감지</a>
+<div style="padding-top:20px;">
+<table border>
+<tr style="font-size:20px;">
+<th>no</th>
+<th>날짜</th>
+<th>시간</th>
+<th>위치</th>
+<th>사진</th>
+</tr>
+{% for item in items %}
+<tr>
+<td style = "font-size : 20px; text-align: center;">{{ item.detectid }}</td>
+<td style = "font-size : 20px; text-align: center;">{{ item.detectday }}</td>
+<td style = "font-size : 20px; text-align: center;">{{ item.detecttime }}</td>
+<td style = "font-size : 20px; text-align: center;">{{ item.detectposition }}</td>
+<td style = "font-size : 20px; text-align: center;"><img src = "{{ item.detectimage }}" border="0" width="250" height ="250"></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</center>
+</body>
+</html>
